@@ -2,7 +2,7 @@
 ### An Open Standard for Verifiable AI Workflows
 A project by [Gauge Freedom, Inc.](https://gaugefreedom.com)
 
-This directory contains the official JSON Schema definitions for **IntelexTA Content-Addressable Receipts (CARs)**.
+This directory contains the official JSON Schema definitions for **Intelexta Content-Addressable Receipts (CARs)**.
 
 A **CAR** is a portable, tamper-evident receipt for an AI-assisted workflow run. It captures:
 - **What** ran (model, prompts, steps),
@@ -19,7 +19,7 @@ These schemas are the *source of truth* for any tool that wants to **emit, verif
 **`car-v0.3.schema.json`** – Active schema (November 2025)
 
 This version accurately reflects the current implementation of:
-- IntelexTA Desktop CAR exporter (CAR-Full)
+- Intelexta Desktop CAR exporter (CAR-Full)
 - Verifiable Summary MCP server (CAR-Lite)
 - `intelexta-verify` CLI verifier
 - Web verifier
@@ -137,11 +137,11 @@ High-level shape of a v0.3 CAR:
     "steps": [
       {
         "id": "...",
-        "runId": "...",           // camelCase
-        "orderIndex": 0,          // camelCase
-        "checkpointType": "...",  // camelCase
-        "tokenBudget": 1000,      // camelCase
-        "proofMode": "exact",     // camelCase
+        "runId": "...",           
+        "orderIndex": 0,          
+        "checkpointType": "...",  
+        "tokenBudget": 1000,      
+        "proofMode": "exact",     
         ...
       }
     ]
@@ -155,10 +155,10 @@ High-level shape of a v0.3 CAR:
           "prev_chain": "",
           "curr_chain": "<sha256>",
           "signature": "<base64>",
-          "run_id": "...",        // snake_case
+          "run_id": "...",        
           "kind": "Step",
           "timestamp": "...",
-          "inputs_sha256": "...", // snake_case
+          "inputs_sha256": "...", 
           "outputs_sha256": "...",
           "usage_tokens": 0,
           "prompt_tokens": 0,
@@ -246,7 +246,7 @@ then:
    * Validate signatures and hash chains
    * Optionally, implement your own replay/semantics on top.
 
-You do **not** have to use Intelexta Desktop to participate; any system emitting CARs that conform to v0.3 is considered a first-class citizen of the IntelexTA trust layer.
+You do **not** have to use Intelexta Desktop to participate; any system emitting CARs that conform to v0.3 is considered a first-class citizen of the Intelexta trust layer.
 
 ---
 
@@ -336,7 +336,7 @@ When proposing schema changes:
 
 ## License
 
-See the main IntelexTA repository `LICENSE` file.
+See the main Intelexta repository `LICENSE` file.
 
 ---
 Learn more about our mission and products at **[gaugefreedom.com](https://gaugefreedom.com)**.

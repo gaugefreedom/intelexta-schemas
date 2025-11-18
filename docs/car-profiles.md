@@ -1,9 +1,9 @@
 # CAR Profiles: Lite vs Full
 
-This document explains the two **profiles** built on top of the IntelexTA CAR v0.3 schema:
+This document explains the two **profiles** built on top of the Intelexta CAR v0.3 schema:
 
 - **CAR-Lite** – Minimal, easy-to-emit profile for plugins and simple tools  
-- **CAR-Full** – Rich evidence profile used by IntelexTA Desktop and production workflows
+- **CAR-Full** – Rich evidence profile used by Intelexta Desktop and production workflows
 
 Both profiles:
 
@@ -159,7 +159,7 @@ CAR-Lite is perfect for:
 
 **Goal:** Provide **rich, audit-level evidence** for complex workflows, including detailed budgets, multiple steps, and replay semantics.
 
-CAR-Full is what **IntelexTA Desktop** emits for LLM workflows.
+CAR-Full is what **Intelexta Desktop** emits for LLM workflows.
 
 ### 3.1. Typical Use Case
 
@@ -257,7 +257,7 @@ CAR-Full is ideal for:
 | Aspect                 | CAR-Lite                      | CAR-Full                                 |
 | ---------------------- | ----------------------------- | ---------------------------------------- |
 | Schema                 | `car-v0.3`                    | `car-v0.3`                               |
-| Typical producer       | MCP / plugin / simple tool    | IntelexTA Desktop, rich apps             |
+| Typical producer       | MCP / plugin / simple tool    | Intelexta Desktop, rich apps             |
 | Steps                  | Usually 1                     | 1+ (multi-step workflows)                |
 | `match_kind`           | `"process"`                   | `"exact"` or `"semantic"` (plus process) |
 | Budgets                | 0 or coarse approximations    | Real token/USD/nature metrics            |
@@ -296,7 +296,7 @@ A natural migration path:
 
      * Set `run.kind` and `proof.match_kind` to `"exact"` or `"semantic"`.
      * Populate semantic digests once your replay engine is ready.
-   * Align with the same patterns IntelexTA Desktop uses.
+   * Align with the same patterns Intelexta Desktop uses.
 
 At every stage, your CARs remain valid v0.3, and verifiers don’t break—only the *strength* and *richness* of the proof improves.
 
